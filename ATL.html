@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ATL</title>
+<meta name="theme-color" content="#07070f">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icmluZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM3YzVjZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjUiIHN0b3AtY29sb3I9IiNmZmQwOGEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmY3YTJmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTQxMjJiIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA1MDUwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iaGFsbyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjYyIiBzdG9wLWNvbG9yPSIjZmY5YTNjIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmY5YTNjIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8Y2xpcFBhdGggaWQ9ImZyb250Ij48cmVjdCB4PSIwIiB5PSIyNTYiIHdpZHRoPSI1MTIiIGhlaWdodD0iMjU2Ii8+PC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9InVybCgjYmcpIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxNTAiIGZpbGw9InVybCgjaGFsbykiLz4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTggMjU2IDI1NikiPgogICAgPGVsbGlwc2UgY3g9IjI1NiIgY3k9IjI1NiIgcng9IjE3MCIgcnk9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMjAiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSI4NCIgZmlsbD0iIzAwMCIgc3Ryb2tlPSIjZmZiMzVjIiBzdHJva2Utb3BhY2l0eT0iMC44IiBzdHJva2Utd2lkdGg9IjMiLz4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTggMjU2IDI1NikiIGNsaXAtcGF0aD0idXJsKCNmcm9udCkiPgogICAgPGVsbGlwc2UgY3g9IjI1NiIgY3k9IjI1NiIgcng9IjE3MCIgcnk9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMjAiLz4KICA8L2c+Cjwvc3ZnPgo=" type="image/svg+xml">
+<style>
+/* ATL - deep-space palette: ink background, ember accent from the accretion disk, violet secondary. */
+:root {
+  --bg: #eef0f7; --surface: #ffffff; --surface2: #e4e7f2; --text: #14162b; --muted: #5b6080;
+  --line: #d3d7e8; --accent: #d9560b; --accent-ink: #ffffff; --violet: #6a4cf0; --danger: #c62a3a; --ok: #1f8f5a;
+  --font: "Vazirmatn", "Segoe UI", Tahoma, system-ui, sans-serif;
+}
+:root[data-theme="dark"] {
+  --bg: #07070f; --surface: #12111f; --surface2: #1b1a2e; --text: #ecebf7; --muted: #9c9bbd;
+  --line: #2a2945; --accent: #ff9a3c; --accent-ink: #1a0d00; --violet: #9b86ff; --danger: #ff6b7a; --ok: #4fd18f;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --bg: #07070f; --surface: #12111f; --surface2: #1b1a2e; --text: #ecebf7; --muted: #9c9bbd;
+    --line: #2a2945; --accent: #ff9a3c; --accent-ink: #1a0d00; --violet: #9b86ff; --danger: #ff6b7a; --ok: #4fd18f;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font: 16px/1.6 var(--font); -webkit-tap-highlight-color: transparent; }
+button, input, select, textarea { font: inherit; color: inherit; }
+h1 { font-size: 1.5rem; margin: 0; }
+h2 { font-size: 1.05rem; margin: 1.4rem 0 .6rem; }
+
+.shell { display: grid; min-height: 100%; grid-template-columns: 230px 1fr; }
+.nav { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; gap: .25rem; padding: 1rem .75rem; background: var(--surface); border-inline-end: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.3rem; letter-spacing: .08em; padding: .4rem .5rem 1.2rem; }
+.brand img { width: 38px; height: 38px; border-radius: 10px; }
+.nav > button { display: flex; align-items: center; gap: .7rem; padding: .65rem .8rem; border: 0; border-radius: 10px; background: none; cursor: pointer; color: var(--muted); text-align: start; }
+.nav > button .ico { width: 1.4rem; text-align: center; font-size: 1.1rem; }
+.nav > button:hover { background: var(--surface2); }
+.nav > button.on { background: var(--surface2); color: var(--text); box-shadow: inset 3px 0 0 var(--accent); }
+[dir="rtl"] .nav > button.on { box-shadow: inset -3px 0 0 var(--accent); }
+main { padding: 1.5rem clamp(1rem, 3vw, 2.5rem) 2rem; max-width: 960px; width: 100%; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; min-height: 40px; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+.btn.danger { color: var(--danger); border-color: var(--danger); }
+:focus-visible { outline: 2px solid var(--violet); outline-offset: 2px; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: .8rem; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: .9rem 1rem; display: flex; flex-direction: column; }
+.stat b { font-size: 1.9rem; line-height: 1.1; }
+.stat span { color: var(--muted); font-size: .9rem; }
+.stat.warn b { color: var(--danger); }
+
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.task, .proj { display: flex; align-items: center; gap: .75rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: .65rem .8rem; }
+.proj { margin-inline-start: calc(var(--d) * 1.4rem); }
+.body { flex: 1; min-width: 0; cursor: pointer; }
+.ttl { font-weight: 600; overflow-wrap: anywhere; }
+.task.done .ttl, .task.cancelled .ttl { text-decoration: line-through; color: var(--muted); }
+.task.cancelled { opacity: .6; }
+.meta { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .25rem; }
+.chip { font-size: .78rem; padding: .05rem .55rem; border-radius: 99px; background: var(--surface2); color: var(--muted); }
+.chip.late { background: color-mix(in srgb, var(--danger) 18%, transparent); color: var(--danger); }
+.chip.pr-high { color: var(--accent); }
+.chip.pr-low { color: var(--violet); }
+.check { width: 28px; height: 28px; flex: none; border-radius: 50%; border: 2px solid var(--muted); background: none; cursor: pointer; color: var(--accent-ink); font-weight: 800; line-height: 1; }
+.task.done .check { background: var(--ok); border-color: var(--ok); }
+.bar { height: 6px; border-radius: 6px; background: var(--surface2); margin-top: .35rem; overflow: hidden; }
+.bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--violet), var(--accent)); }
+.empty, .hint { color: var(--muted); }
+
+.filters { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: .5rem; margin-bottom: 1rem; }
+input, select, textarea { width: 100%; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+label { display: grid; gap: .25rem; font-size: .9rem; color: var(--muted); margin-bottom: .7rem; }
+small { color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: 1rem; }
+.panel h2 { margin-top: 0; }
+.row { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+dialog { width: min(560px, 94vw); max-height: 92vh; border: 1px solid var(--line); border-radius: 16px; background: var(--bg); color: var(--text); padding: 1.2rem; }
+dialog::backdrop { background: rgba(3, 3, 10, .6); }
+dialog h2 { margin-top: 0; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.actions { display: flex; gap: .5rem; align-items: center; margin-top: .6rem; }
+.grow { flex: 1; }
+#toast { position: fixed; inset-inline: 0; bottom: calc(80px + env(safe-area-inset-bottom)); margin: auto; width: fit-content; max-width: 90vw; background: var(--text); color: var(--bg); padding: .5rem 1rem; border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 50; }
+#toast.show { opacity: 1; }
+
+@media (max-width: 760px) {
+  .shell { grid-template-columns: 1fr; padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  .nav { position: fixed; inset: auto 0 0 0; height: auto; flex-direction: row; justify-content: space-around; padding: .3rem .4rem calc(.3rem + env(safe-area-inset-bottom)); border-inline-end: 0; border-top: 1px solid var(--line); z-index: 20; }
+  .brand { display: none; }
+  .nav > button { flex-direction: column; gap: 0; padding: .3rem .6rem; font-size: .75rem; }
+  .nav > button.on, [dir="rtl"] .nav > button.on { box-shadow: none; color: var(--accent); }
+  main { padding-top: calc(1rem + env(safe-area-inset-top)); }
+  .filters, .grid2 { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+</style>
+</head>
+<body>
+<div id="app" class="shell"></div>
+<dialog id="dlg"><form id="dlgForm" autocomplete="off"></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icmluZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM3YzVjZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjUiIHN0b3AtY29sb3I9IiNmZmQwOGEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmY3YTJmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJiZyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTQxMjJiIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA1MDUwZCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iaGFsbyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjYyIiBzdG9wLWNvbG9yPSIjZmY5YTNjIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmY5YTNjIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8Y2xpcFBhdGggaWQ9ImZyb250Ij48cmVjdCB4PSIwIiB5PSIyNTYiIHdpZHRoPSI1MTIiIGhlaWdodD0iMjU2Ii8+PC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9InVybCgjYmcpIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxNTAiIGZpbGw9InVybCgjaGFsbykiLz4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTggMjU2IDI1NikiPgogICAgPGVsbGlwc2UgY3g9IjI1NiIgY3k9IjI1NiIgcng9IjE3MCIgcnk9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMjAiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSI4NCIgZmlsbD0iIzAwMCIgc3Ryb2tlPSIjZmZiMzVjIiBzdHJva2Utb3BhY2l0eT0iMC44IiBzdHJva2Utd2lkdGg9IjMiLz4KICA8ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMTggMjU2IDI1NikiIGNsaXAtcGF0aD0idXJsKCNmcm9udCkiPgogICAgPGVsbGlwc2UgY3g9IjI1NiIgY3k9IjI1NiIgcng9IjE3MCIgcnk9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMjAiLz4KICA8L2c+Cjwvc3ZnPgo=';
+// UI strings. Generated file: Persian text is stored as unicode escapes.
+const STR = {
+ "fa": {
+  "nav_dashboard": "\u062f\u0627\u0634\u0628\u0648\u0631\u062f",
+  "nav_tasks": "\u06a9\u0627\u0631\u0647\u0627",
+  "nav_projects": "\u067e\u0631\u0648\u0698\u0647\u200c\u0647\u0627",
+  "nav_settings": "\u062a\u0646\u0638\u06cc\u0645\u0627\u062a",
+  "pending": "\u062f\u0631 \u0627\u0646\u062a\u0638\u0627\u0631",
+  "done": "\u0627\u0646\u062c\u0627\u0645\u200c\u0634\u062f\u0647",
+  "overdue": "\u0639\u0642\u0628\u200c\u0627\u0641\u062a\u0627\u062f\u0647",
+  "total": "\u06a9\u0644 \u06a9\u0627\u0631\u0647\u0627",
+  "upcoming": "\u0645\u0647\u0644\u062a\u200c\u0647\u0627\u06cc \u0646\u0632\u062f\u06cc\u06a9",
+  "late_list": "\u06a9\u0627\u0631\u0647\u0627\u06cc \u0639\u0642\u0628\u200c\u0627\u0641\u062a\u0627\u062f\u0647",
+  "nothing": "\u0641\u0639\u0644\u0627\u064b \u0686\u06cc\u0632\u06cc \u0646\u06cc\u0633\u062a.",
+  "new_task": "\u06a9\u0627\u0631 \u062c\u062f\u06cc\u062f",
+  "edit_task": "\u0648\u06cc\u0631\u0627\u06cc\u0634 \u06a9\u0627\u0631",
+  "new_project": "\u067e\u0631\u0648\u0698\u0647 \u062c\u062f\u06cc\u062f",
+  "edit_project": "\u0648\u06cc\u0631\u0627\u06cc\u0634 \u067e\u0631\u0648\u0698\u0647",
+  "new_sub": "\u0632\u06cc\u0631\u067e\u0631\u0648\u0698\u0647",
+  "title": "\u0639\u0646\u0648\u0627\u0646",
+  "notes": "\u06cc\u0627\u062f\u062f\u0627\u0634\u062a",
+  "priority": "\u0627\u0648\u0644\u0648\u06cc\u062a",
+  "status": "\u0648\u0636\u0639\u06cc\u062a",
+  "project": "\u067e\u0631\u0648\u0698\u0647",
+  "none": "\u0628\u062f\u0648\u0646 \u067e\u0631\u0648\u0698\u0647",
+  "start": "\u0634\u0631\u0648\u0639 \u0628\u0631\u0646\u0627\u0645\u0647\u200c\u0631\u06cc\u0632\u06cc\u200c\u0634\u062f\u0647",
+  "deadline": "\u0645\u0647\u0644\u062a",
+  "estimate": "\u0628\u0631\u0622\u0648\u0631\u062f \u0632\u0645\u0627\u0646 (\u062f\u0642\u06cc\u0642\u0647)",
+  "orig_est": "\u0628\u0631\u0622\u0648\u0631\u062f \u0627\u0648\u0644\u06cc\u0647",
+  "save": "\u0630\u062e\u06cc\u0631\u0647",
+  "cancel": "\u0627\u0646\u0635\u0631\u0627\u0641",
+  "delete": "\u062d\u0630\u0641",
+  "name": "\u0646\u0627\u0645",
+  "parent": "\u0648\u0627\u0644\u062f",
+  "root": "\u0628\u062f\u0648\u0646 \u0648\u0627\u0644\u062f",
+  "p_low": "\u06a9\u0645",
+  "p_med": "\u0645\u062a\u0648\u0633\u0637",
+  "p_high": "\u0632\u06cc\u0627\u062f",
+  "s_todo": "\u0627\u0646\u062c\u0627\u0645 \u0646\u0634\u062f\u0647",
+  "s_doing": "\u062f\u0631 \u062d\u0627\u0644 \u0627\u0646\u062c\u0627\u0645",
+  "s_done": "\u0627\u0646\u062c\u0627\u0645 \u0634\u062f",
+  "s_cancelled": "\u0644\u063a\u0648 \u0634\u062f",
+  "search": "\u062c\u0633\u062a\u062c\u0648 \u062f\u0631 \u06a9\u0627\u0631\u0647\u0627",
+  "all": "\u0647\u0645\u0647",
+  "no_tasks": "\u06a9\u0627\u0631\u06cc \u067e\u06cc\u062f\u0627 \u0646\u0634\u062f. \u0628\u0627 \u062f\u06a9\u0645\u0647 \u00ab\u06a9\u0627\u0631 \u062c\u062f\u06cc\u062f\u00bb \u0634\u0631\u0648\u0639 \u06a9\u0646\u06cc\u062f.",
+  "no_projects": "\u0647\u0646\u0648\u0632 \u067e\u0631\u0648\u0698\u0647\u200c\u0627\u06cc \u0646\u062f\u0627\u0631\u06cc\u062f. \u0628\u0627 \u062f\u06a9\u0645\u0647 \u00ab\u067e\u0631\u0648\u0698\u0647 \u062c\u062f\u06cc\u062f\u00bb \u0634\u0631\u0648\u0639 \u06a9\u0646\u06cc\u062f.",
+  "confirm_task": "\u0627\u06cc\u0646 \u06a9\u0627\u0631 \u0628\u0631\u0627\u06cc \u0647\u0645\u06cc\u0634\u0647 \u062d\u0630\u0641 \u0634\u0648\u062f\u061f",
+  "confirm_project": "\u0627\u06cc\u0646 \u067e\u0631\u0648\u0698\u0647 \u062d\u0630\u0641 \u0634\u0648\u062f\u061f \u06a9\u0627\u0631\u0647\u0627\u06cc \u0622\u0646 \u0628\u062f\u0648\u0646 \u067e\u0631\u0648\u0698\u0647 \u0645\u06cc\u200c\u0634\u0648\u0646\u062f \u0648 \u0632\u06cc\u0631\u067e\u0631\u0648\u0698\u0647\u200c\u0647\u0627 \u06cc\u06a9 \u0633\u0637\u062d \u0628\u0627\u0644\u0627 \u0645\u06cc\u200c\u0631\u0648\u0646\u062f.",
+  "theme": "\u067e\u0648\u0633\u062a\u0647",
+  "theme_auto": "\u062e\u0648\u062f\u06a9\u0627\u0631",
+  "theme_light": "\u0631\u0648\u0634\u0646",
+  "theme_dark": "\u062a\u06cc\u0631\u0647",
+  "language": "\u0632\u0628\u0627\u0646",
+  "calendar": "\u062a\u0642\u0648\u06cc\u0645",
+  "cal_jalali": "\u0634\u0645\u0633\u06cc",
+  "cal_greg": "\u0645\u06cc\u0644\u0627\u062f\u06cc",
+  "backup": "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u200c\u06af\u06cc\u0631\u06cc \u0648 \u0628\u0627\u0632\u06cc\u0627\u0628\u06cc",
+  "export": "\u062f\u0631\u06cc\u0627\u0641\u062a \u0641\u0627\u06cc\u0644 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646",
+  "import": "\u0628\u0627\u0632\u06cc\u0627\u0628\u06cc \u0627\u0632 \u0641\u0627\u06cc\u0644 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646",
+  "backup_hint": "\u062f\u0627\u062f\u0647\u200c\u0647\u0627 \u0641\u0642\u0637 \u0631\u0648\u06cc \u0647\u0645\u06cc\u0646 \u062f\u0633\u062a\u06af\u0627\u0647 \u0630\u062e\u06cc\u0631\u0647 \u0645\u06cc\u200c\u0634\u0648\u0646\u062f. \u0628\u0647\u200c\u0637\u0648\u0631 \u0645\u0646\u0638\u0645 \u0641\u0627\u06cc\u0644 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646 \u0628\u06af\u06cc\u0631\u06cc\u062f.",
+  "import_ok": "\u062f\u0627\u062f\u0647\u200c\u0647\u0627 \u0628\u0627\u0632\u06cc\u0627\u0628\u06cc \u0634\u062f.",
+  "import_bad": "\u0641\u0627\u06cc\u0644 \u067e\u0634\u062a\u06cc\u0628\u0627\u0646 \u0645\u0639\u062a\u0628\u0631 \u0646\u06cc\u0633\u062a\u061b \u0686\u06cc\u0632\u06cc \u062a\u063a\u06cc\u06cc\u0631 \u0646\u06a9\u0631\u062f.",
+  "import_confirm": "\u0628\u0627 \u0628\u0627\u0632\u06cc\u0627\u0628\u06cc\u060c \u0647\u0645\u0647\u200c\u06cc \u062f\u0627\u062f\u0647\u200c\u0647\u0627\u06cc \u0641\u0639\u0644\u06cc \u062c\u0627\u06cc\u06af\u0632\u06cc\u0646 \u0645\u06cc\u200c\u0634\u0648\u0646\u062f. \u0627\u062f\u0627\u0645\u0647 \u0645\u06cc\u200c\u062f\u0647\u06cc\u062f\u061f",
+  "install": "\u0646\u0635\u0628 \u0628\u0631\u0646\u0627\u0645\u0647",
+  "install_hint": "\u0628\u0631\u0627\u06cc \u0646\u0635\u0628 \u062f\u0631 \u0627\u0646\u062f\u0631\u0648\u06cc\u062f \u0627\u0632 \u0645\u0646\u0648\u06cc \u06a9\u0631\u0648\u0645 \u06af\u0632\u06cc\u0646\u0647 \u00abInstall app\u00bb \u0631\u0627 \u0628\u0632\u0646\u06cc\u062f.",
+  "storage": "\u0630\u062e\u06cc\u0631\u0647\u200c\u0633\u0627\u0632\u06cc \u067e\u0627\u06cc\u062f\u0627\u0631",
+  "storage_yes": "\u0641\u0639\u0627\u0644 \u0627\u0633\u062a",
+  "storage_no": "\u0641\u0639\u0627\u0644 \u0646\u06cc\u0633\u062a (\u0645\u0631\u0648\u0631\u06af\u0631 \u0645\u0645\u06a9\u0646 \u0627\u0633\u062a \u062f\u0631 \u06a9\u0645\u0628\u0648\u062f \u0641\u0636\u0627 \u062f\u0627\u062f\u0647 \u0631\u0627 \u067e\u0627\u06a9 \u06a9\u0646\u062f)",
+  "saved": "\u0630\u062e\u06cc\u0631\u0647 \u0634\u062f.",
+  "deleted": "\u062d\u0630\u0641 \u0634\u062f.",
+  "error": "\u062e\u0637\u0627 \u0631\u062e \u062f\u0627\u062f:",
+  "offline_ready": "\u0628\u0631\u0646\u0627\u0645\u0647 \u0622\u0645\u0627\u062f\u0647\u200c\u06cc \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0622\u0641\u0644\u0627\u06cc\u0646 \u0627\u0633\u062a.",
+  "min": "\u062f\u0642\u06cc\u0642\u0647",
+  "required": "\u0639\u0646\u0648\u0627\u0646 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f."
+ },
+ "en": {
+  "nav_dashboard": "Dashboard",
+  "nav_tasks": "Tasks",
+  "nav_projects": "Projects",
+  "nav_settings": "Settings",
+  "pending": "Pending",
+  "done": "Done",
+  "overdue": "Overdue",
+  "total": "All tasks",
+  "upcoming": "Upcoming deadlines",
+  "late_list": "Overdue tasks",
+  "nothing": "Nothing here yet.",
+  "new_task": "New task",
+  "edit_task": "Edit task",
+  "new_project": "New project",
+  "edit_project": "Edit project",
+  "new_sub": "Subproject",
+  "title": "Title",
+  "notes": "Notes",
+  "priority": "Priority",
+  "status": "Status",
+  "project": "Project",
+  "none": "No project",
+  "start": "Planned start",
+  "deadline": "Deadline",
+  "estimate": "Estimated time (minutes)",
+  "orig_est": "Original estimate",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "name": "Name",
+  "parent": "Parent",
+  "root": "No parent",
+  "p_low": "Low",
+  "p_med": "Medium",
+  "p_high": "High",
+  "s_todo": "To do",
+  "s_doing": "In progress",
+  "s_done": "Done",
+  "s_cancelled": "Cancelled",
+  "search": "Search tasks",
+  "all": "All",
+  "no_tasks": "No tasks found. Use \"New task\" to start.",
+  "no_projects": "No projects yet. Use \"New project\" to start.",
+  "confirm_task": "Delete this task permanently?",
+  "confirm_project": "Delete this project? Its tasks become unassigned and subprojects move up one level.",
+  "theme": "Theme",
+  "theme_auto": "Automatic",
+  "theme_light": "Light",
+  "theme_dark": "Dark",
+  "language": "Language",
+  "calendar": "Calendar",
+  "cal_jalali": "Jalali",
+  "cal_greg": "Gregorian",
+  "backup": "Backup and restore",
+  "export": "Download backup file",
+  "import": "Restore from backup file",
+  "backup_hint": "Your data lives only on this device. Download a backup regularly.",
+  "import_ok": "Data restored.",
+  "import_bad": "Invalid backup file. Nothing was changed.",
+  "import_confirm": "Restoring replaces all current data. Continue?",
+  "install": "Install app",
+  "install_hint": "On Android, use Chrome's menu and choose \"Install app\".",
+  "storage": "Persistent storage",
+  "storage_yes": "Enabled",
+  "storage_no": "Not enabled (the browser may clear data when space is low)",
+  "saved": "Saved.",
+  "deleted": "Deleted.",
+  "error": "Error:",
+  "offline_ready": "The app is ready for offline use.",
+  "min": "min",
+  "required": "Enter a title."
+ }
+};
+
+const db = (() => {
+// Data layer: a thin promise wrapper around IndexedDB.
+// All user data stays in the browser on the user's device.
+const DB_NAME = 'atl';
+const DB_VERSION = 1;
+const STORES = ['tasks', 'projects', 'settings'];
+let dbPromise;
+
+function open() {
+  if (!dbPromise) {
+    dbPromise = new Promise((resolve, reject) => {
+      const req = indexedDB.open(DB_NAME, DB_VERSION);
+      req.onupgradeneeded = () => {
+        STORES.forEach((s) => {
+          if (!req.result.objectStoreNames.contains(s)) req.result.createObjectStore(s, { keyPath: 'id' });
+        });
+      };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }
+  return dbPromise;
+}
+
+function run(store, mode, fn) {
+  return open().then((db) => new Promise((resolve, reject) => {
+    const tx = db.transaction(store, mode);
+    const request = fn(tx.objectStore(store));
+    tx.oncomplete = () => resolve(request ? request.result : undefined);
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error);
+  }));
+}
+
+const getAll = (store) => run(store, 'readonly', (s) => s.getAll());
+const put = (store, value) => run(store, 'readwrite', (s) => s.put(value));
+const remove = (store, id) => run(store, 'readwrite', (s) => s.delete(id));
+
+// Replace everything in one atomic transaction: if anything fails, old data stays untouched.
+async function replaceAll(data) {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const names = Object.keys(data);
+    const tx = db.transaction(names, 'readwrite');
+    names.forEach((n) => {
+      const s = tx.objectStore(n);
+      s.clear();
+      data[n].forEach((item) => s.put(item));
+    });
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error);
+  });
+}
+
+const uid = () => (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2));
+
+return { open, getAll, put, remove, replaceAll, uid, STORES };
+})();
+
+// Date formatting for Jalali (Persian) and Gregorian calendars using the built-in Intl API.
+function fmt(value, calendar, lang, withTime = false) {
+  if (!value) return '';
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return '';
+  const jalali = calendar === 'jalali';
+  const locale = lang === 'fa'
+    ? `fa-IR-u-ca-${jalali ? 'persian' : 'gregory'}`
+    : `en-US-u-ca-${jalali ? 'persian' : 'gregory'}`;
+  const opts = withTime ? { dateStyle: 'medium', timeStyle: 'short' } : { dateStyle: 'medium' };
+  return new Intl.DateTimeFormat(locale, opts).format(d);
+}
+
+const isOverdue = (task, now = Date.now()) =>
+  !!task.deadline && !['done', 'cancelled'].includes(task.status) && new Date(task.deadline).getTime() < now;
+
+// ATL - main application logic (UI + state). Data access lives in db.js.
+// Classic scripts (no ES modules) so the app also works when index.html is opened directly from disk.
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+const S = {
+  tasks: [], projects: [],
+  prefs: { id: 'prefs', theme: 'auto', lang: 'fa', cal: 'jalali' },
+  view: 'dashboard',
+  f: { q: '', project: '', status: '' },
+  installPrompt: null
+};
+
+const t = (k) => (STR[S.prefs.lang] && STR[S.prefs.lang][k]) || k;
+const nf = (n) => new Intl.NumberFormat(S.prefs.lang === 'fa' ? 'fa-IR' : 'en').format(n);
+const D = (v, time) => fmt(v, S.prefs.cal, S.prefs.lang, time);
+const PRIORITIES = ['low', 'med', 'high'];
+const STATUSES = ['todo', 'doing', 'done', 'cancelled'];
+
+/* ---------- helpers ---------- */
+function toast(msg) {
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(() => el.classList.remove('show'), 2600);
+}
+
+function applyPrefs() {
+  const root = document.documentElement;
+  root.lang = S.prefs.lang;
+  root.dir = S.prefs.lang === 'fa' ? 'rtl' : 'ltr';
+  root.dataset.theme = S.prefs.theme;
+}
+
+// Flattened project tree: [{ p, depth }]
+function flat(parent = null, depth = 0) {
+  return S.projects
+    .filter((p) => (p.parentId || null) === parent)
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .flatMap((p) => [{ p, depth }, ...flat(p.id, depth + 1)]);
+}
+function descendantIds(id) {
+  const out = [id];
+  S.projects.filter((p) => p.parentId === id).forEach((c) => out.push(...descendantIds(c.id)));
+  return out;
+}
+const projectName = (id) => (S.projects.find((p) => p.id === id) || {}).name || '';
+const projectOptions = (selected, excludeIds = [], emptyLabel) =>
+  `<option value="">${esc(emptyLabel)}</option>` +
+  flat().filter(({ p }) => !excludeIds.includes(p.id))
+    .map(({ p, depth }) => `<option value="${p.id}" ${p.id === selected ? 'selected' : ''}>${'\u2014 '.repeat(depth)}${esc(p.name)}</option>`).join('');
+const options = (list, prefix, selected) =>
+  list.map((k) => `<option value="${k}" ${k === selected ? 'selected' : ''}>${esc(t(prefix + k))}</option>`).join('');
+
+/* ---------- data ---------- */
+async function load() {
+  [S.tasks, S.projects] = await Promise.all([db.getAll('tasks'), db.getAll('projects')]);
+  const saved = (await db.getAll('settings')).find((x) => x.id === 'prefs');
+  if (saved) S.prefs = { ...S.prefs, ...saved };
+}
+async function savePrefs() { await db.put('settings', S.prefs); }
+
+async function saveTask(form, id) {
+  const v = Object.fromEntries(new FormData(form));
+  const title = (v.title || '').trim();
+  if (!title) { toast(t('required')); return false; }
+  const est = v.est === '' ? null : Math.max(0, Math.round(Number(v.est)));
+  const x = id ? S.tasks.find((a) => a.id === id)
+    : { id: db.uid(), createdAt: Date.now(), originalEstMin: null, history: [], sessions: [] };
+  // Original estimate is preserved forever; later changes are logged in history.
+  if (x.originalEstMin == null && est != null) x.originalEstMin = est;
+  else if (id && x.estMin !== est) x.history.push({ at: Date.now(), field: 'estMin', from: x.estMin, to: est });
+  Object.assign(x, {
+    title, notes: v.notes || '', priority: v.priority, status: v.status,
+    projectId: v.project || null, start: v.start || null, deadline: v.deadline || null,
+    estMin: est, updatedAt: Date.now()
+  });
+  x.completedAt = x.status === 'done' ? (x.completedAt || Date.now()) : null;
+  await db.put('tasks', x);
+  return true;
+}
+
+async function saveProject(form, id) {
+  const v = Object.fromEntries(new FormData(form));
+  const name = (v.name || '').trim();
+  if (!name) { toast(t('required')); return false; }
+  const x = id ? S.projects.find((a) => a.id === id) : { id: db.uid(), createdAt: Date.now() };
+  Object.assign(x, { name, parentId: v.parent || null, notes: v.notes || '' });
+  await db.put('projects', x);
+  return true;
+}
+
+async function deleteProject(id) {
+  const p = S.projects.find((a) => a.id === id);
+  for (const c of S.projects.filter((c) => c.parentId === id)) { c.parentId = p.parentId || null; await db.put('projects', c); }
+  for (const x of S.tasks.filter((x) => x.projectId === id)) { x.projectId = null; await db.put('tasks', x); }
+  await db.remove('projects', id);
+}
+
+/* ---------- views ---------- */
+function taskRow(x) {
+  const late = isOverdue(x);
+  const meta = [
+    x.projectId ? `<span class="chip">${esc(projectName(x.projectId))}</span>` : '',
+    `<span class="chip pr-${x.priority}">${esc(t('p_' + x.priority))}</span>`,
+    x.deadline ? `<span class="chip ${late ? 'late' : ''}">${esc(D(x.deadline, true))}</span>` : '',
+    x.estMin != null ? `<span class="chip">${nf(x.estMin)} ${esc(t('min'))}</span>` : ''
+  ].join('');
+  return `<li class="task ${x.status}">
+    <button class="check" data-act="toggle" data-id="${x.id}" aria-label="${esc(t('s_done'))}">${x.status === 'done' ? '\u2713' : ''}</button>
+    <div class="body" data-act="edit-task" data-id="${x.id}" tabindex="0">
+      <div class="ttl">${esc(x.title)}</div><div class="meta">${meta}</div>
+    </div></li>`;
+}
+
+function filteredTasks() {
+  const q = S.f.q.trim().toLowerCase();
+  const ids = S.f.project ? descendantIds(S.f.project) : null;
+  return S.tasks
+    .filter((x) => (!q || (x.title + ' ' + (x.notes || '')).toLowerCase().includes(q))
+      && (!ids || ids.includes(x.projectId)) && (!S.f.status || x.status === S.f.status))
+    .sort((a, b) => (a.status === 'done') - (b.status === 'done') || (a.deadline || '9').localeCompare(b.deadline || '9'));
+}
+const listHtml = () => {
+  const items = filteredTasks();
+  return items.length ? `<ul class="list">${items.map(taskRow).join('')}</ul>` : `<p class="empty">${esc(t('no_tasks'))}</p>`;
+};
+
+const views = {
+  dashboard() {
+    const open = S.tasks.filter((x) => !['done', 'cancelled'].includes(x.status));
+    const late = open.filter((x) => isOverdue(x));
+    const upcoming = open.filter((x) => x.deadline && !isOverdue(x)).sort((a, b) => a.deadline.localeCompare(b.deadline)).slice(0, 5);
+    const stat = (n, label, cls = '') => `<div class="stat ${cls}"><b>${nf(n)}</b><span>${esc(label)}</span></div>`;
+    const block = (title, arr) => `<section><h2>${esc(title)}</h2>${arr.length ? `<ul class="list">${arr.map(taskRow).join('')}</ul>` : `<p class="empty">${esc(t('nothing'))}</p>`}</section>`;
+    return `<header class="top"><h1>${esc(t('nav_dashboard'))}</h1><button class="btn primary" data-act="new-task">+ ${esc(t('new_task'))}</button></header>
+      <div class="stats">${stat(open.length, t('pending'))}${stat(late.length, t('overdue'), late.length ? 'warn' : '')}${stat(S.tasks.filter((x) => x.status === 'done').length, t('done'))}${stat(S.tasks.length, t('total'))}</div>
+      ${block(t('late_list'), late)}${block(t('upcoming'), upcoming)}`;
+  },
+  tasks() {
+    return `<header class="top"><h1>${esc(t('nav_tasks'))}</h1><button class="btn primary" data-act="new-task">+ ${esc(t('new_task'))}</button></header>
+      <div class="filters">
+        <input type="search" data-filter="q" value="${esc(S.f.q)}" placeholder="${esc(t('search'))}">
+        <select data-filter="project">${projectOptions(S.f.project, [], t('all'))}</select>
+        <select data-filter="status"><option value="">${esc(t('all'))}</option>${options(STATUSES, 's_', S.f.status)}</select>
+      </div><div id="list">${listHtml()}</div>`;
+  },
+  projects() {
+    const rows = flat().map(({ p, depth }) => {
+      const ids = descendantIds(p.id);
+      const all = S.tasks.filter((x) => ids.includes(x.projectId) && x.status !== 'cancelled');
+      const pct = all.length ? Math.round((all.filter((x) => x.status === 'done').length / all.length) * 100) : 0;
+      return `<li class="proj" style="--d:${depth}">
+        <div class="body" data-act="edit-project" data-id="${p.id}" tabindex="0"><div class="ttl">${esc(p.name)}</div>
+        <div class="bar"><i style="width:${pct}%"></i></div><div class="meta"><span class="chip">${nf(pct)}%</span><span class="chip">${nf(all.length)}</span></div></div>
+        <button class="btn" data-act="new-sub" data-id="${p.id}">+ ${esc(t('new_sub'))}</button></li>`;
+    }).join('');
+    return `<header class="top"><h1>${esc(t('nav_projects'))}</h1><button class="btn primary" data-act="new-project">+ ${esc(t('new_project'))}</button></header>
+      ${rows ? `<ul class="list">${rows}</ul>` : `<p class="empty">${esc(t('no_projects'))}</p>`}`;
+  },
+  settings() {
+    const sel = (key, vals, prefix) => `<select data-pref="${key}">${vals.map(([v, l]) => `<option value="${v}" ${S.prefs[key] === v ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select>`;
+    return `<header class="top"><h1>${esc(t('nav_settings'))}</h1></header>
+      <div class="panel">
+        <label>${esc(t('theme'))}${sel('theme', [['auto', t('theme_auto')], ['light', t('theme_light')], ['dark', t('theme_dark')]])}</label>
+        <label>${esc(t('language'))}${sel('lang', [['fa', 'Persian'], ['en', 'English']])}</label>
+        <label>${esc(t('calendar'))}${sel('cal', [['jalali', t('cal_jalali')], ['gregorian', t('cal_greg')]])}</label>
+      </div>
+      <div class="panel"><h2>${esc(t('backup'))}</h2><p class="hint">${esc(t('backup_hint'))}</p>
+        <div class="row"><button class="btn primary" data-act="export">${esc(t('export'))}</button>
+        <label class="btn">${esc(t('import'))}<input type="file" id="importFile" accept="application/json,.json" hidden></label></div>
+        <p class="hint">${esc(t('storage'))}: <b id="persistState">...</b></p></div>
+      <div class="panel"><h2>${esc(t('install'))}</h2><p class="hint">${esc(t('install_hint'))}</p>
+        ${S.installPrompt ? `<button class="btn primary" data-act="install">${esc(t('install'))}</button>` : ''}</div>`;
+  }
+};
+
+function render() {
+  applyPrefs();
+  const nav = [['dashboard', '\u25D0'], ['tasks', '\u2713'], ['projects', '\u25A4'], ['settings', '\u2699']];
+  $('#app').innerHTML = `<nav class="nav"><div class="brand"><img src="${ICON}" alt=""><span>ATL</span></div>
+    ${nav.map(([v, i]) => `<button data-act="nav" data-v="${v}" class="${S.view === v ? 'on' : ''}"><span class="ico">${i}</span><span>${esc(t('nav_' + v))}</span></button>`).join('')}</nav>
+    <main>${views[S.view]()}</main>`;
+  if (S.view === 'settings' && navigator.storage && navigator.storage.persisted) {
+    navigator.storage.persisted().then((p) => { const el = $('#persistState'); if (el) el.textContent = p ? t('storage_yes') : t('storage_no'); });
+  }
+}
+async function refresh() { await load(); render(); }
+
+/* ---------- dialogs ---------- */
+function openDialog(html, onSubmit, danger) {
+  const dlg = $('#dlg'), form = $('#dlgForm');
+  form.innerHTML = html + `<div class="actions">${danger ? `<button type="button" class="btn danger" id="dlgDel">${esc(t('delete'))}</button>` : ''}<span class="grow"></span>
+    <button type="button" class="btn" id="dlgCancel">${esc(t('cancel'))}</button><button class="btn primary">${esc(t('save'))}</button></div>`;
+  form.onsubmit = async (e) => {
+    e.preventDefault();
+    try { if (await onSubmit(form)) { dlg.close(); await refresh(); toast(t('saved')); } } catch (err) { toast(t('error') + ' ' + err.message); }
+  };
+  $('#dlgCancel').onclick = () => dlg.close();
+  if (danger) $('#dlgDel').onclick = async () => { if (confirm(danger.msg)) { await danger.run(); dlg.close(); await refresh(); toast(t('deleted')); } };
+  const pv = (name) => { const el = form.elements[name], out = form.querySelector(`[data-pv="${name}"]`); if (el && out) out.textContent = D(el.value, true); };
+  form.oninput = () => { pv('start'); pv('deadline'); };
+  pv('start'); pv('deadline');
+  dlg.showModal();
+}
+
+function taskDialog(id) {
+  const x = id ? S.tasks.find((a) => a.id === id) : { priority: 'med', status: 'todo', projectId: S.f.project || null };
+  const dt = (name, label) => `<label>${esc(label)}<input type="datetime-local" name="${name}" value="${esc(x[name] || '')}"><small data-pv="${name}"></small></label>`;
+  openDialog(`<h2>${esc(t(id ? 'edit_task' : 'new_task'))}</h2>
+    <label>${esc(t('title'))}<input name="title" value="${esc(x.title || '')}" required maxlength="200"></label>
+    <div class="grid2"><label>${esc(t('priority'))}<select name="priority">${options(PRIORITIES, 'p_', x.priority)}</select></label>
+    <label>${esc(t('status'))}<select name="status">${options(STATUSES, 's_', x.status)}</select></label></div>
+    <label>${esc(t('project'))}<select name="project">${projectOptions(x.projectId, [], t('none'))}</select></label>
+    <div class="grid2">${dt('start', t('start'))}${dt('deadline', t('deadline'))}</div>
+    <label>${esc(t('estimate'))}<input type="number" name="est" min="0" step="1" value="${x.estMin ?? ''}"></label>
+    ${x.originalEstMin != null && x.originalEstMin !== x.estMin ? `<small>${esc(t('orig_est'))}: ${nf(x.originalEstMin)} ${esc(t('min'))}</small>` : ''}
+    <label>${esc(t('notes'))}<textarea name="notes" rows="4">${esc(x.notes || '')}</textarea></label>`,
+  (f) => saveTask(f, id),
+  id ? { msg: t('confirm_task'), run: () => db.remove('tasks', id) } : null);
+}
+
+function projectDialog(id, parentId = null) {
+  const x = id ? S.projects.find((a) => a.id === id) : { parentId };
+  openDialog(`<h2>${esc(t(id ? 'edit_project' : 'new_project'))}</h2>
+    <label>${esc(t('name'))}<input name="name" value="${esc(x.name || '')}" required maxlength="120"></label>
+    <label>${esc(t('parent'))}<select name="parent">${projectOptions(x.parentId, id ? descendantIds(id) : [], t('root'))}</select></label>
+    <label>${esc(t('notes'))}<textarea name="notes" rows="3">${esc(x.notes || '')}</textarea></label>`,
+  (f) => saveProject(f, id),
+  id ? { msg: t('confirm_project'), run: () => deleteProject(id) } : null);
+}
+
+/* ---------- backup / restore ---------- */
+function exportData() {
+  const data = { app: 'ATL', version: 1, exportedAt: new Date().toISOString(), tasks: S.tasks, projects: S.projects, settings: [S.prefs] };
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+  a.download = `atl-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+async function importData(file) {
+  try {
+    const data = JSON.parse(await file.text());
+    const ok = data && data.app === 'ATL' && Array.isArray(data.tasks) && Array.isArray(data.projects)
+      && data.tasks.every((x) => x && typeof x.id === 'string' && typeof x.title === 'string')
+      && data.projects.every((x) => x && typeof x.id === 'string' && typeof x.name === 'string');
+    if (!ok) throw new Error('invalid');
+    if (!confirm(t('import_confirm'))) return;
+    const settings = Array.isArray(data.settings) ? data.settings.filter((s) => s && s.id === 'prefs') : [];
+    await db.replaceAll({ tasks: data.tasks, projects: data.projects, settings });
+    await refresh();
+    toast(t('import_ok'));
+  } catch (e) { toast(t('import_bad')); }
+}
+
+/* ---------- events ---------- */
+document.addEventListener('click', async (e) => {
+  const el = e.target.closest('[data-act]');
+  if (!el) return;
+  const { act, id, v } = el.dataset;
+  try {
+    if (act === 'nav') { S.view = v; render(); }
+    else if (act === 'new-task') taskDialog();
+    else if (act === 'edit-task') taskDialog(id);
+    else if (act === 'new-project') projectDialog();
+    else if (act === 'edit-project') projectDialog(id);
+    else if (act === 'new-sub') projectDialog(null, id);
+    else if (act === 'export') exportData();
+    else if (act === 'install' && S.installPrompt) { S.installPrompt.prompt(); S.installPrompt = null; render(); }
+    else if (act === 'toggle') {
+      const x = S.tasks.find((a) => a.id === id);
+      x.status = x.status === 'done' ? 'todo' : 'done';
+      x.completedAt = x.status === 'done' ? Date.now() : null;
+      await db.put('tasks', x); await refresh();
+    }
+  } catch (err) { toast(t('error') + ' ' + err.message); }
+});
+
+document.addEventListener('keydown', (e) => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.body[data-act]')) { e.preventDefault(); e.target.click(); }
+});
+
+document.addEventListener('input', (e) => {
+  const key = e.target.dataset.filter;
+  if (key === 'q') { S.f.q = e.target.value; $('#list').innerHTML = listHtml(); }
+});
+document.addEventListener('change', async (e) => {
+  const { filter, pref } = e.target.dataset;
+  if (filter && filter !== 'q') { S.f[filter] = e.target.value; $('#list').innerHTML = listHtml(); }
+  if (pref) { S.prefs[pref] = e.target.value; await savePrefs(); render(); }
+  if (e.target.id === 'importFile' && e.target.files[0]) { await importData(e.target.files[0]); e.target.value = ''; }
+});
+
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); S.installPrompt = e; if (S.view === 'settings') render(); });
+window.addEventListener('unhandledrejection', (e) => toast(t('error') + ' ' + (e.reason && e.reason.message || e.reason)));
+
+/* ---------- start ---------- */
+(async function init() {
+  try {
+    await load();
+    render();
+    if (navigator.storage && navigator.storage.persist) navigator.storage.persist();
+  } catch (err) {
+    document.body.textContent = 'ATL failed to start: ' + err.message;
+  }
+})();
+
+
+</script>
+</body>
+</html>
